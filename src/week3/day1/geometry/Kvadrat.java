@@ -12,4 +12,9 @@ public class Kvadrat extends Figure{
   public double square(){
     return side * side;
   }
+
+  @Override
+  public double perimeter() {
+    return 4 * side;
+  }
 }

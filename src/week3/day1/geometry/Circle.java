@@ -1,6 +1,6 @@
 package week3.day1.geometry;
 
-public class Circle extends Figure{
+public class Circle extends Figure {
   private double radius;
 
   public double getRadius() {
@@ -11,8 +11,13 @@ public class Circle extends Figure{
     this.radius = radius;
   }
 
-  public double square(){
+  public double square() {
     return Math.PI * radius * radius;
+  }
+
+  @Override
+  public double perimeter() {
+    return Math.PI * radius * 2;
   }
 
   @Override

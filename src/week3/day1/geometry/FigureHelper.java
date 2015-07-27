@@ -6,4 +6,8 @@ public class FigureHelper {
     System.out.println(figure.square());
   }
 
+  public static void printPerimeter(Figure figure){
+    System.out.println(figure.perimeter());
+  }
+
 }

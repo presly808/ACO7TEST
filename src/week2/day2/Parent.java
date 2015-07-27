@@ -12,4 +12,8 @@ public class Parent {
   public void parentMethod(){
 
   }
+
+  public static void hello(){
+    System.out.println("Hello");
+  }
 }

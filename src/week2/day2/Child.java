@@ -5,4 +5,8 @@ public class Child extends Parent {
     super();
     System.out.println("In child");
   }
+
+  public static void hello(){
+    System.out.println("Go to hell");
+  }
 }

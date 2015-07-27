@@ -8,7 +8,7 @@ public class Ex2 {
 //    System.out.println(n1);
 
     toStringTranslator(n1);
-    toStringTranslator(new Dragon(100, "Black"));
+    toStringTranslator(new IceDragon(100, 100, "Black"));
 
     System.out.println(n1.equals(n2));
   }

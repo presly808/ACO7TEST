@@ -25,7 +25,7 @@ public class App {
     int figureType = sc.nextInt();
     Figure figure = createFigure(figureType);
     FigureHelper.printSquare(figure);
-
+    FigureHelper.printPerimeter(figure);
   }
 
   public static Figure createFigure(int type) {

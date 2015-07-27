@@ -6,6 +6,7 @@ public class Dev extends Employee {
     System.out.println(" I am coding...");
   }
 
+  @Override
   public void work(){
     System.out.println(" I am coding...");
   }

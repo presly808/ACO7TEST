@@ -11,4 +11,9 @@ public class IceDragon extends Dragon {
   public void freeze() {
     System.out.println("Freeze with damage " + iceDamage);
   }
+
+  @Override
+  public void voice() {
+    System.out.println("Privet");
+  }
 }

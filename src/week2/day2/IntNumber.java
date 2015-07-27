@@ -1,7 +1,7 @@
 package week2.day2;
 
-public class IntNumber {
-  private int value;
+public final class IntNumber {
+  private final int value;
 
   public IntNumber(int value) {
     this.value = value;
@@ -11,8 +11,8 @@ public class IntNumber {
     return value;
   }
 
-  public void add(IntNumber number){
-    value = value + number.value;
+  public IntNumber add(IntNumber number){
+    return new IntNumber(value + number.value);
   }
 
   public String toString() {

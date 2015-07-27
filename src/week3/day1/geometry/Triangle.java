@@ -12,4 +12,10 @@ public class Triangle extends Figure {
   public double square() {
     return 0.5 * height * base;
   }
+
+  @Override
+  public double perimeter() {
+    //TODO: write formula
+    return 0;
+  }
 }

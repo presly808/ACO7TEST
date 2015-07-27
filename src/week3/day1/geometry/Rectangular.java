@@ -13,5 +13,10 @@ public class Rectangular extends Figure{
     return width * height;
   }
 
+  @Override
+  public double perimeter() {
+    return 2 * (width + height);
+  }
+
 
 }

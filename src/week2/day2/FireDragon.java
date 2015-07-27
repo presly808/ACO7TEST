@@ -16,4 +16,9 @@ public class FireDragon extends Dragon {
   public void spitFire() {
     System.out.println("Spit fire with damage " + fireDamage);
   }
+
+  @Override
+  public void voice() {
+    System.out.println("Hello");
+  }
 }

@@ -1,6 +1,6 @@
 package week2.day2;
 
-public class Dragon {
+public abstract class Dragon {
   private int damage;
   private String color;
 
@@ -8,6 +8,8 @@ public class Dragon {
     this.damage = damage;
     this.color = color;
   }
+
+  public abstract void voice();
 
   public int getDamage() {
     return damage;
@@ -18,6 +20,7 @@ public class Dragon {
   }
 
   public void fly() {
+    voice();
     System.out.println("I am flying. Vzhhhh");
   }
 
