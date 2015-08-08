@@ -1,7 +1,5 @@
 package week3.day2;
 
-import week3.day1.geometry.FigureHelper;
-
 public class StaticExample {
 
   public static void main(String[] args) {
@@ -20,7 +18,6 @@ public class StaticExample {
     System.out.println(Ticket.getCounter());
 
   }
-
 
 
 }
