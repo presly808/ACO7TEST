@@ -1,7 +1,5 @@
 package week4.day1;
 
-import week4.day1.music.CoinSizeComparator;
-
 import java.util.Arrays;
 import java.util.Comparator;
 
@@ -32,11 +30,27 @@ public class Ex2 {
     }
 
     CoinSizeComparator comparator = new CoinSizeComparator();
-    sort(wallet, comparator);
+//    sort(wallet, comparator);
+    sort(wallet, new Comparator<Coin>() {
+      @Override
+      public int compare(Coin coin1, Coin coin2) {
+        if (coin1.getSize() > coin2.getSize()) {
+          return 1;
+        } else if (coin1.getSize() < coin2.getSize()) {
+          return -1;
+        }
+        return 0;
+      }
+    });
+    System.out.println("~~~~~~~~~~");
+//    Arrays.sort(wallet, comparator);
     System.out.println("After comparator sort");
+
+
     for (Coin coin : wallet) {
       System.out.println(coin);
     }
+
 
 //    System.out.println(Arrays.toString(wallet));
 
@@ -64,6 +78,18 @@ public class Ex2 {
           arr[j + 1] = temp;
         }
       }
+    }
+  }
+
+  public static class CoinSizeComparator implements Comparator<Coin> {
+
+    public int compare(Coin coin1, Coin coin2) {
+      if (coin1.getSize() > coin2.getSize()) {
+        return 1;
+      } else if (coin1.getSize() < coin2.getSize()) {
+        return -1;
+      }
+      return 0;
     }
   }
 }

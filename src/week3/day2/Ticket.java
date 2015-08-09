@@ -17,8 +17,12 @@ public class Ticket {
     saleDate = new Date();
     this.id = ++counter;
   }
+//
+//  private void foo1(int id) {
+//    this.id = id;
+//  }
 
-  public static int getCounter(){
+  public static int getCounter() {
     return counter;
   }
 
