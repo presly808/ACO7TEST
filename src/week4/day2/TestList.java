@@ -10,7 +10,14 @@ public class TestList {
     list.add("world");
     list.add("!");
 
-    System.out.println(list.get(0));
-    System.out.println(list.get(1));
+    list.add("1", 3);
+    list.add("534", 1);
+
+    list.remove("1");
+    list.remove(0);
+//    System.out.println(list.get(0));
+//    System.out.println(list.get(1));
+
+    System.out.println(list);
   }
 }

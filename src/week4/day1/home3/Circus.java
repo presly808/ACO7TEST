@@ -1,35 +1,37 @@
 package week4.day1.home3;
 
+import collections.IList;
+import collections.MyList;
+
 public class Circus {
-  private Artist[] artists;
-  private int index;
+  private IList artists;
 
   public Circus() {
     this(10);
   }
 
   public Circus(int numberOfArtists) {
-    artists = new Artist[numberOfArtists];
+    artists = new MyList(numberOfArtists);
   }
 
   public void add(Artist artist) {
-    artists[index++] = artist;
+    artists.add(artist);
   }
 
   public void showArtists() {
 //    for (Artist artist : artists) {
 //      System.out.println(artist);
 //    }
-    for (int i = 0; i < index; i++) {
-      System.out.println(artists[i]);
+    for (int i = 0; i < artists.size(); i++) {
+      System.out.println(artists.get(i));
     }
   }
 
   //don't do that! It's for learning purposes
-  public void showAcrobats(){
-    for (int i = 0; i < index; i++) {
-      if (artists[i] instanceof Acrobat) {
-        System.out.println(artists[i]);
+  public void showAcrobats() {
+    for (int i = 0; i < artists.size(); i++) {
+      if (artists.get(i) instanceof Acrobat) {
+        System.out.println(artists.get(i));
       }
     }
   }
