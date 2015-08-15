@@ -9,6 +9,7 @@ public class IceDragon extends Dragon {
   }
 
   public void freeze() {
+//    damage
     System.out.println("Freeze with damage " + iceDamage);
   }
 

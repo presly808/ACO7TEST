@@ -1,7 +1,7 @@
 package week2.day2;
 
 public abstract class Dragon {
-  private int damage;
+  protected int damage;
   private String color;
 
   public Dragon(int damage, String color) {

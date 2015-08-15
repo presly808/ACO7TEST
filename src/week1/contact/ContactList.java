@@ -1,29 +1,28 @@
 package week1.contact;
 
+import collections.IList;
+import collections.MyList;
+
 public class ContactList {
-  Contact[] contacts = new Contact[10];
-  int freePlace;
+  IList contacts = new MyList();
 
   public void addContact(Contact contact) {
-    contacts[freePlace] = contact;
-    freePlace++;
+    contacts.add(contact);
   }
 
   public void showAll() {
-    for (int i = 0; i < freePlace; i++) {
-      Contact current = contacts[i];
-      current.showInfo();
+    for (int i = 0; i < contacts.size(); i++) {
+//      Contact current = (Contact) contacts.get(i);
+//      current.showInfo();
+      System.out.println(contacts.get(i));
     }
   }
 
-  public Contact removeLast(){
-    freePlace--;
-    Contact last = contacts[freePlace];
-    contacts[freePlace] = null;
-    return last;
+  public boolean removeLast() {
+    return contacts.remove(contacts.size() - 1);
   }
 
-  public Contact find(String keyWord){
+  public Contact find(String keyWord) {
     return null;
   }
 }

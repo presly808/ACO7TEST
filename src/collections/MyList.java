@@ -3,10 +3,10 @@ package collections;
 import java.util.Arrays;
 import java.util.Objects;
 
-public class MyList implements IList {
+public class MyList<T> implements IList<T> {
 
   private static final int DEFAULT_SIZE = 16;
-  private Object[] elements;
+  private T[] elements;
   private int size;
 
   public MyList() {
@@ -14,24 +14,36 @@ public class MyList implements IList {
   }
 
   public MyList(int size) {
-    elements = new Object[size];
+    elements = (T[]) new Object[size];
   }
 
   @Override
-  public boolean add(Object obj) {
+  public boolean add(T obj) {
     ensureCapacity();
     elements[size++] = obj;
     return true;
   }
 
   @Override
-  public boolean add(Object obj, int index) {
+  public void clear() {
+//TODO: implement this
+  }
+
+  @Override
+  public boolean isEmpty() {
+    return size == 0;
+  }
+
+  @Override
+  public boolean add(T t, int index) {
     checkIndex(index);
     ensureCapacity();
 
-    Object[] array = new Object[elements.length];
+
+    //TODO: don't create new array. Use 1 System.arraycopy();
+    T[] array = (T[]) new Object[elements.length];
     System.arraycopy(elements, 0, array, 0, index);
-    array[index] = obj;
+    array[index] = t;
     System.arraycopy(elements, index, array, index + 1, size() - index);
     elements = array;
     size++;
@@ -52,36 +64,35 @@ public class MyList implements IList {
   }
 
   @Override
-  public Object remove(Object obj) {
+  public boolean remove(T obj) {
     for (int i = 0; i < size(); i++) {
       if (Objects.equals(elements[i], obj)) {
         return remove(i);
       }
     }
 
-    return null;
+    return false;
   }
 
   @Override
-  public Object remove(int index) {
-    Object removed = get(index);
+  public boolean remove(int index) {
     if (index == size() - 1) {
       elements[index] = null;
     } else {
       System.arraycopy(elements, index + 1, elements, index, size() - index + 1);
     }
     size--;
-    return removed;
+    return true;
   }
 
   @Override
-  public Object get(int index) {
+  public T get(int index) {
     checkIndex(index);
     return elements[index];
   }
 
   @Override
-  public boolean contains(Object obj) {
+  public boolean contains(T obj) {
     for (int i = 0; i < size(); i++) {
       if (Objects.equals(elements[i], obj)) {
         return true;

@@ -9,6 +9,7 @@ public class TestDragon {
 
     Dragon kindDragon = new FireDragon(100, 0, "Pink");
     System.out.println("~~~~~~~~~~");
+//kindDragon.damage
 
     FireDragon badToTheBoneDragon = new FireDragon(200);
     badToTheBoneDragon.spitFire();

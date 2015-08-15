@@ -1,5 +1,7 @@
 package week4.day1;
 
+import week3.day2.MyNumber;
+
 public final class Coin implements Comparable<Coin> {
   private final int nominal;
   private final double size;

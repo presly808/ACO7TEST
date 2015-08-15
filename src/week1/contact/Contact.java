@@ -6,6 +6,15 @@ public class Contact {
   String phone;
   int age;
 
+  @Override
+  public String toString() {
+    return "Contact{" +
+      "name='" + name + '\'' +
+      ", phone='" + phone + '\'' +
+      ", age=" + age +
+      '}';
+  }
+
   public void showInfo() {
     System.out.println(name + "," + phone + "," + age);
   }

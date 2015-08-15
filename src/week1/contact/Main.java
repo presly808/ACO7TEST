@@ -29,6 +29,6 @@ public class Main {
   }
 
   public static void addToContactList(int pos, ContactList contactList, Contact contact){
-    contactList.contacts[pos] = contact;
+    contactList.contacts.add(contact);
   }
 }
