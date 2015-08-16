@@ -1,7 +1,7 @@
 package week4.day1.home3;
 
 import collections.IList;
-import collections.MyList;
+import collections.impl.MyList;
 
 public class Circus {
   private IList artists;

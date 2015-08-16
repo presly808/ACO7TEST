@@ -40,4 +40,9 @@ public class Cat implements Cloneable {
     clonedCat.age = age;
     return clonedCat;
   }
+
+  public void foo() throws CloneNotSupportedException{
+    super.clone();
+    System.out.println("hello");
+  }
 }

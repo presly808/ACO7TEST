@@ -12,7 +12,6 @@ public class CloneTest {
 */
     Cat cloned = cat1.clone();
     System.out.println(cloned);
-
   }
 
 }

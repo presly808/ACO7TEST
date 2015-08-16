@@ -1,7 +1,7 @@
 package week1.contact;
 
 import collections.IList;
-import collections.MyList;
+import collections.impl.MyList;
 
 public class ContactList {
   IList contacts = new MyList();

@@ -1,7 +1,7 @@
 package week5.day1;
 
 import collections.IList;
-import collections.MyList;
+import collections.impl.MyList;
 
 public class Ex1 {
   public static void main(String[] args) {

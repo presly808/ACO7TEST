@@ -1,4 +1,6 @@
-package collections;
+package collections.impl;
+
+import collections.IList;
 
 import java.util.Arrays;
 import java.util.Objects;
@@ -60,6 +62,9 @@ public class MyList<T> implements IList<T> {
   private void checkIndex(int index) {
     if (index < 0 || index > size() - 1) {
       //what to do?
+//      IllegalArgumentException exception = new IllegalArgumentException(String.valueOf(index));
+//      throw exception;
+      throw new IllegalArgumentException("incorrect index: " + index);
     }
   }
 
