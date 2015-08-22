@@ -3,6 +3,7 @@ package collections.impl;
 import collections.IStack;
 
 import java.util.EmptyStackException;
+import java.util.Iterator;
 
 public class MyStack<E> extends MyList<E> implements IStack<E> {
 
@@ -31,5 +32,10 @@ public class MyStack<E> extends MyList<E> implements IStack<E> {
   public E peek() {
     checkEmptiness();
     return get(size() - 1);
+  }
+
+  @Override
+  public Iterator<E> iterator() {
+    return super.iterator();
   }
 }

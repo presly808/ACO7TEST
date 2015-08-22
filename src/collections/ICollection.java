@@ -1,6 +1,6 @@
 package collections;
 
-public interface ICollection<T> {
+public interface ICollection<T> extends Iterable<T> {
   boolean add(T t);
 
   void clear();

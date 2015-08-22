@@ -3,6 +3,7 @@ package collections.impl;
 import collections.IList;
 
 import java.util.Arrays;
+import java.util.Iterator;
 import java.util.Objects;
 
 public class MyList<T> implements IList<T> {
@@ -119,5 +120,30 @@ public class MyList<T> implements IList<T> {
     }
     builder.append(elements[size() - 1]).append("]");
     return builder.toString();
+  }
+
+  @Override
+  public Iterator<T> iterator() {
+    return new MyListIterator();
+  }
+
+  private class MyListIterator implements Iterator<T> {
+
+    private int index;
+
+    @Override
+    public boolean hasNext() {
+      return elements[index] != null;
+    }
+
+    @Override
+    public T next() {
+      return elements[index++];
+    }
+
+    @Override
+    public void remove() {
+      throw new UnsupportedOperationException();
+    }
   }
 }
