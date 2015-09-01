@@ -7,10 +7,10 @@ public class Main {
 
     ContactList contactList = new ContactList();
 
-    Contact contact = new Contact();// create instance(object) of class
+//    Contact contact = new Contact();// create instance(object) of class
     // reference    =  object
     // link,control =  data(memory)
-    contact.phone = "+380933091219";
+   /* contact.phone = "+380933091219";
     contact.age = 23;
     contact.name = "Serhii";
 
@@ -23,9 +23,9 @@ public class Main {
     contact2.phone = "+380932331254";
     contact2.age = 30;
     contact2.name = "Anton";
-    contactList.addContact(contact2);
+    contactList.addContact(contact2);*/
 
-    contact2.showInfo();
+//    contact2.showInfo();
   }
 
   public static void addToContactList(int pos, ContactList contactList, Contact contact){

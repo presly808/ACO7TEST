@@ -20,13 +20,13 @@ public class App {
     Scanner scanner = new Scanner(System.in);
     switch (action) {
       case 1:
-        Contact contact = new Contact();
+        Contact contact = new Contact("", "");
         System.out.println("Enter phone number");
-        contact.phone = scanner.next();
+      /*  contact.phone = scanner.next();
         System.out.println("Enter age");
         contact.age = scanner.nextInt();
         System.out.println("Enter name");
-        contact.name = scanner.next();
+        contact.name = scanner.next();*/
 
         list.addContact(contact);
         break;
